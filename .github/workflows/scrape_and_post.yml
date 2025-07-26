@@ -25,4 +25,4 @@ jobs:
           SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           SHEET_NAME: 'シート1'
         run: |
-          python src/scrape_to_sheet.py "https://nf3.sakura.ne.jp/Pacific/E/f/12_stat.htm"
+          python scrape_to_sheet.py "https://nf3.sakura.ne.jp/Pacific/E/f/12_stat.htm"
