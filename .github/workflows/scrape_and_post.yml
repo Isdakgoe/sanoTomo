@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
       - name: Scrape and post to sheet
         env:
-          SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
 
         run: |
