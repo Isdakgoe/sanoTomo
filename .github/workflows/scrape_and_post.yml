@@ -20,7 +20,6 @@ jobs:
       - name: Scrape and post to sheet
         env:
           SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
-          SHEET_NAME: 'シート1'
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
 
         run: |
