@@ -1,0 +1,28 @@
+name: ScrapeAndPostToSheet
+
+on:
+  schedule:
+    - cron: '0 23 * * *' # JST 8:00 (UTC 23:00)
+  workflow_dispatch:
+
+jobs:
+  scrape-and-post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Set up Google credentials
+        run: |
+          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
+      - name: Scrape and post to sheet
+        env:
+          SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          SHEET_NAME: 'シート1'
+        run: |
+          python src/scrape_to_sheet.py "https://nf3.sakura.ne.jp/Pacific/E/f/12_stat.htm"
