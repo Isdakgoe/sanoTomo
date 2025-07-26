@@ -41,10 +41,6 @@ def extract_table_by_caption(soup, caption_title):
     return []
 
 
-# 環境設定
-os.environ['SHEET_ID'] = "1MlMamm-Ha5xW4FsNQPGAh7CthyhBS4yGNtToF8NGK-U"
-
-
 # 作動時刻
 def get_current_time():
     DIFF_JST_FROM_UTC = 9
