@@ -151,7 +151,8 @@ results_pitcher = [scraping(url) for url in url_list_pitcher]
 """ --- Google Spreadsheet出力部分 --- """
 #  1. gspread認証
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(os.environ["GOOGLE_CREDENTIALS_JSON"], scope)
+creds_dict = json.loads(os.environ["GOOGLE_CREDENTIALS_JSON"])
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 client = gspread.authorize(creds)
 
 # 2. シート指定
