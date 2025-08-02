@@ -59,6 +59,7 @@ url_list_batter = [
     "https://nf3.sakura.ne.jp/Pacific/M/f/99_stat.htm",
     "https://nf3.sakura.ne.jp/Pacific/E/f/12_stat.htm",
     "https://nf3.sakura.ne.jp/Pacific/E/f/23_stat.htm",
+    "https://nf3.sakura.ne.jp/Pacific/E/f/9_stat.htm", 
     "https://nf3.sakura.ne.jp/Pacific/B/f/36_stat.htm",
     "https://nf3.sakura.ne.jp/Pacific/B/f/54_stat.htm",
     "https://nf3.sakura.ne.jp/Pacific/L/f/26_stat.htm",
